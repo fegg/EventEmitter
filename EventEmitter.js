@@ -49,7 +49,7 @@
     return this._events || (this._events = {});
   };
 
-	/**
+  /**
    * 获取所有监听器
   */
   proto.getListeners = function (e) {
@@ -58,7 +58,7 @@
     return events[e] || (events[e] = []);
   };
 
-	/**
+  /**
    * 返回 object 类型的监听器数据
   */
   proto.getListenersAsObject = function (e) {
@@ -73,7 +73,7 @@
     return res || listeners;
   };
 
-	/**
+  /**
    * 注册事件，default: 永久存在
    * { listener: any(function), once: boolean }
   */
@@ -98,7 +98,7 @@
     return this;
   };
 
-	/**
+  /**
    * 取消注册指定事件
   */
   proto.off = function (e, listener) {
@@ -118,7 +118,7 @@
     return this;
   };
 
-	/**
+  /**
    * 注册一次事件
   */
   proto.once = function (e, listener) {
@@ -128,7 +128,7 @@
     });
   };
 
-	/**
+/**
    * 销毁当前指定类型，所有注册的事件引用
   */
   proto.destory = function (e) {
@@ -146,7 +146,7 @@
   };
 
   var sliceArray = Array.prototype.slice;
-	/**
+  /**
    * 触发定义的事件
   */
   proto.emit = function (e) {
@@ -187,7 +187,7 @@
     return EventEmitter;
   };
 
-	/**
+  /**
    * 模块导出：AMD、CommonJS、Global
   */
   if (typeof define === 'function' && define.amd) {
