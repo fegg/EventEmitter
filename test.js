@@ -2,20 +2,20 @@ var EventEmitter = require('./EventEmitter');
 
 var events = new EventEmitter();
 
-function onChange1 () {
-	console.log('change emit 1...');
+function onChange1() {
+  console.log('change emit 1...');
 }
 
-function onChange2 () {
-	console.log('change emit 2...');
+function onChange2() {
+  console.log('change emit 2...');
 }
 
-function onChange3 () {
-	console.log('change emit 3...');
+function onChange3() {
+  console.log('change emit 3...');
 }
 
-function onChange4 () {
-	console.log('change emit 4...');
+function onChange4() {
+  console.log('change emit 4...');
 }
 
 var all = {};
