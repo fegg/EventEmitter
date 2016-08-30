@@ -177,7 +177,7 @@
     return this;
   }
 
-	/**
+  /**
    * 防止命名冲突
   */
   var _EventEmitter = exports.EventEmitter;
