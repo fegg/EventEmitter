@@ -39,6 +39,7 @@ console.log(all.change.length === 2);
 console.log('--------------');
 
 events.off('change', onChange1);
+events.emit('change');
 
 console.log('--------------');
 all = events.getListenersAsObject('change');
@@ -47,6 +48,7 @@ console.log(all.change.length === 1);
 console.log('--------------');
 
 events.on('change', onChange4);
+events.emit('change');
 
 console.log('--------------');
 all = events.getListenersAsObject('change');
@@ -55,6 +57,7 @@ console.log(all.change.length === 2);
 console.log('--------------');
 
 events.destory('change');
+events.emit('change');
 
 console.log('--------------');
 all = events.getListenersAsObject('change');
