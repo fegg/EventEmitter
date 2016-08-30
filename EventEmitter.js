@@ -194,7 +194,7 @@
 		define(function () {
 			return EventEmitter;
 		});
-    } else if (typeof module === 'object' && module.exports){
+    } else if (typeof module === 'object' && module.exports) {
     	module.exports = EventEmitter;
     } else {
     	exports.EventEmitter = EventEmitter;

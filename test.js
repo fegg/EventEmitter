@@ -64,3 +64,4 @@ all = events.getListenersAsObject('change');
 console.log(all);
 console.log(all.change.length === 0);
 console.log('--------------');
+
