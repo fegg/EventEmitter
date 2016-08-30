@@ -1,21 +1,21 @@
 ; (function (exports) {
   var hasOwnProperty = Object.prototype.hasOwnProperty;
   // 获取自己的直接属性
-  function hasOwn(obj, key) {
+  function hasOwn (obj, key) {
     return hasOwnProperty.call(obj, key);
   }
 
-  function isWrap(value) {
+  function isWrap (value) {
     return typeof value === 'object';
   }
 
   // 构造器
-  function EventEmitter() { }
+  function EventEmitter () { }
   // 原形引用缓存
   var proto = EventEmitter.prototype;
 
   // 查找 listeners
-  function find(listeners, listener) {
+  function find (listeners, listener) {
     var n = listeners.length;
     if (n > 0) {
       for (var i = 0; i < n; ++i) {
@@ -29,7 +29,7 @@
   }
 
   // 验证 listener 类型
-  function valid(listener) {
+  function valid (listener) {
     if (typeof listener === 'function') {
       return true;
     } else if (listener && typeof listener === 'object') {
