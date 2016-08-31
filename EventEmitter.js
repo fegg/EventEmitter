@@ -9,14 +9,6 @@
     return typeof value === 'object';
   }
 
-  function returnTrue() {
-    return true;
-  }
-
-  function returnFalse() {
-    return false;
-  }
-
   // 构造器
   function EventEmitter () { }
   // 原形引用缓存
@@ -94,7 +86,7 @@
       if (hasOwn(listeners, key) && find(listeners[key], listener) === -1) {
         listeners[key].push(listenerIsWrapped ? listener : {
           listener: listener,
-          once: returnFalse()
+          once: false
         });
       }
     }
@@ -169,7 +161,7 @@
         for (i = 0; i < len; ++i) {
           listener = listeners[i];
 
-          if (listener.once === returnTrue()) {
+          if (listener.once === true) {
             this.off(e, listener.listener);
           }
 
