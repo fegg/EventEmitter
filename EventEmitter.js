@@ -155,7 +155,7 @@
 
     for (key in listenersMap) {
       if (hasOwn(listenersMap, key)) {
-        listeners = listenersMap[key].slice(0);
+        listeners = listenersMap[key];
 
         var len = listeners.length;
         for (i = 0; i < len; ++i) {
