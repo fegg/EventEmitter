@@ -5,10 +5,6 @@
     return hasOwnProperty.call(obj, key);
   }
 
-  function isWrap (value) {
-    return typeof value === 'object';
-  }
-
   // 构造器
   function EventEmitter () { }
   // 原形引用缓存
@@ -79,7 +75,7 @@
     }
 
     var listeners = this.getListenersAsObject(e);
-    var listenerIsWrapped = isWrap(listener);
+    var listenerIsWrapped = typeof listener === 'object';
 
     var key;
     for (key in listeners) {
