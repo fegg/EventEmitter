@@ -71,14 +71,10 @@
   */
   proto.getListenersAsObject = function (e) {
     var listeners = this.getListeners(e);
-    var res;
+    var res = {};
+    res[e] = listeners;
 
-    if (listeners instanceof Array) {
-      res = {};
-      res[e] = listeners;
-    }
-
-    return res || listeners;
+    return res;
   };
 
   /**
